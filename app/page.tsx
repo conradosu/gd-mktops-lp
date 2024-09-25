@@ -1,95 +1,46 @@
-import Image from "next/image";
+"use client";
+
+import FadeIn from "react-fade-in";
 import styles from "./page.module.css";
+
+import { Box, Button, Flex, Image, Text } from "@mantine/core";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Flex>
+        <Box
+          className={styles.section}
+          h="100vh"
+          style={{
+            height: "100vh",
+            backgroundImage: "url(/autores.jfif)",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <Box className={styles.content}>
+            <FadeIn transitionDuration={1000}>
+              <Box mb={30}>
+                <Image src="/logo.png" alt="Marketing Ops" w={250} mb={40} />
+                <Text c="white" fz="2rem" lh={1.2} fw={500} mb={25}>
+                  <strong>Marketing Ops na prática</strong>: Todo o conhecimento que você precisa para organizar os
+                  dados da sua empresa, sair do operacional e gerar mais resultados!
+                </Text>
+                <Text c="white" fz="1.2rem" fw={500} opacity={0.85}>
+                  O processo de estruturação de dados de Marketing Ops é um grande desafio para as empresas, desde
+                  coletar os dados corretamente, garantir a confiabilidade das métricas e também identificar e otimizar
+                  os resultados dos diferentes canais de aquisição.
+                </Text>
+              </Box>
+              <Button size="xl" color="var(--mantine-color-blue-9)" radius="md">
+                Quero mais informações
+              </Button>
+            </FadeIn>
+          </Box>
+        </Box>
+      </Flex>
+    </>
   );
 }
