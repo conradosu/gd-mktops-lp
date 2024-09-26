@@ -6,7 +6,17 @@
     justify-content: center;
 }
 
-.content {
+.authors {
     width: 50%;
     max-width: 900px;
+}
+
+.indicatedForImg {
+    width: 350px;
+    margin-right: 50px;
+}
+
+.indicatedFor {
+    width: 100%;
+    max-width: 600px;
 }
