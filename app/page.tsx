@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
-const Fade = require("react-reveal/Fade");
+const Fade = require("react-reveal/Fade"); //eslint-disable-next-line @typescript-eslint/no-var-requires
 
 import { Box, Button, Divider, Flex, Image, Text } from "@mantine/core";
 import {
