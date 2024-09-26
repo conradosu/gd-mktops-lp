@@ -159,7 +159,7 @@ export default function Home() {
                 >
                   Marketing Ops na Prática
                 </span>
-                {", "}é indicado?
+                {" "}é indicado?
               </Text>
 
               <Text c="white" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
