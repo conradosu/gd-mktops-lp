@@ -1,8 +1,7 @@
 "use client";
 
+/* eslint-disable */
 import styles from "./page.module.css";
-
-/* tslint:disable no-var-requires */
 const Fade = require("react-reveal/Fade");
 
 import { Box, Button, Divider, Flex, Image, Text } from "@mantine/core";
