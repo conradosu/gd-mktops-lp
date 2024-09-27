@@ -17,11 +17,11 @@ import FadeIn from "react-fade-in";
 export default function Home() {
   return (
     <>
-      <Box
+      <Flex
         className={styles.section}
         h="100vh"
+        align="center"
         style={{
-          height: "100vh",
           backgroundImage: "url(/autores.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -29,13 +29,13 @@ export default function Home() {
           backgroundColor: "var(--mantine-color-gray-9)",
         }}
       >
-        <FadeIn transitionDuration={1000}>
-          <Box className={styles.authors}>
-            <Box>
+        <Box className={styles.authors}>
+          <FadeIn transitionDuration={1000}>
+            <Box w="100%" maw={600}>
               <Box mb={30}>
                 <Image src="/logo.png" alt="Marketing Ops" w={250} mb={40} />
                 <Text c="white" fz="2rem" lh={1.2} fw={500} mb={25}>
-                  <strong>Marketing Ops na prática</strong>: Todo o conhecimento que você precisa para organizar os
+                  <strong>Marketing Ops na Prática</strong>: Todo o conhecimento que você precisa para organizar os
                   dados da sua empresa, sair do operacional e gerar mais resultados!
                 </Text>
                 <Text c="white" fz="1.2rem" fw={500} opacity={0.85}>
@@ -53,9 +53,9 @@ export default function Home() {
                 Quero mais informações!
               </Button>
             </Box>
-          </Box>
-        </FadeIn>
-      </Box>
+          </FadeIn>
+        </Box>
+      </Flex>
 
       <Flex
         className={styles.section}
@@ -82,7 +82,7 @@ export default function Home() {
               </Text>
 
               <Text c="white" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
-                Nosso curso Marketing Ops na prática foi montado de forma organizada e explicativa para facilitar sua
+                Nosso curso Marketing Ops na Prática foi montado de forma organizada e explicativa para facilitar sua
                 jornada!
               </Text>
             </Box>
@@ -158,8 +158,8 @@ export default function Home() {
                   }}
                 >
                   Marketing Ops na Prática
-                </span>
-                {" "}é indicado?
+                </span>{" "}
+                é indicado?
               </Text>
 
               <Text c="white" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
@@ -300,7 +300,7 @@ export default function Home() {
       </Flex>
 
       <Flex className={styles.section} bg="var(--mantine-color-gray-9)" align="center" direction="column">
-        <Box w={850}>
+        <Box w={1000}>
           <Fade delay={200} distance="20px" top>
             <Box>
               <Text c="white" fz="2rem" lh={1.2} fw={900} mb={10}>
