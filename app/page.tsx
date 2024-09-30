@@ -426,7 +426,7 @@ export default function Home() {
         className={styles.section}
         h={650}
         mt={-75}
-        bg="var(--mantine-color-blue-9)"
+        bg="var(--mantine-color-gray-9)"
         align="center"
         justify="center"
         pos="relative"
@@ -435,7 +435,7 @@ export default function Home() {
           w="100%"
           h="100%"
           pos="absolute"
-          opacity={0.4}
+          opacity={0.25}
           style={{
             backgroundImage: "url(/autores2.jpg)",
             backgroundSize: "cover",
