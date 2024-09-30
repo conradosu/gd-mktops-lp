@@ -469,7 +469,7 @@ export default function Home() {
             </Fade>
           </Box>
 
-          <Fade delay={1200} distance="100px" left>
+          <Fade delay={600} distance="100px" left>
             <iframe
               src="https://www.youtube.com/embed/V0cebQ4LnTE?si=Z-FMnZ5U70IOe1Y8"
               style={{
@@ -478,6 +478,81 @@ export default function Home() {
                 border: 0,
               }}
             />
+          </Fade>
+        </Flex>
+      </Flex>
+
+      <Flex className={styles.section} align="center" direction="column">
+        <Flex maw={650} mb={50} align="center" ta="center">
+          <Fade delay={400} distance="20px" top>
+            <Box>
+              <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.2} fw={900} mb={10}>
+                Quem participou comprova:
+              </Text>
+
+              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+                Veja o que os participantes do curso Marketing Ops na Prática têm a dizer sobre a experiência.
+              </Text>
+            </Box>
+          </Fade>
+        </Flex>
+
+        <Flex wrap="wrap" justify="center" maw={1200}>
+          <Fade delay={200} distance="20px" top cascade>
+            {[
+              {
+                title: "Almir Neves",
+                subtitle: "Empreendedor",
+                description:
+                  'O curso "Marketing Ops na Prática" transformou sua empresa, permitindo decisões mais estratégicas baseadas em dados, em vez de agir no escuro. Recomenda para empreendedores que desejam tomar decisões informadas.',
+                imgSrc: "/depoimentos/01.png",
+              },
+              {
+                title: "Camilla Hara",
+                subtitle: "Gerente de Marketing",
+                description:
+                  "O curso trouxe mais clareza e ajudou a empresa a construir conhecimento interno sobre dados, tornando as decisões mais assertivas e intencionais.",
+                imgSrc: "/depoimentos/02.png",
+              },
+              {
+                title: "Daniel Cecossi",
+                subtitle: "Gestor de Tráfego",
+                description:
+                  "Ganhou confiança ao analisar os dados da empresa e agora toma decisões embasadas. Recomenda até para quem não é da área de marketing, mas deseja entender melhor os resultados do setor.",
+                imgSrc: "/depoimentos/03.png",
+              },
+            ].map((i, index) => (
+              <Flex maw={350} align="center" direction="column" mx={10} key={index}>
+                <Image
+                  src={i.imgSrc}
+                  alt={i.title}
+                  w={250}
+                  mb={25}
+                  radius="50%"
+                  style={{
+                    filter: "drop-shadow(0px 0px 15px var(--mantine-color-dark-2))",
+                  }}
+                />
+
+                <Flex ta="center" direction="column" align="center">
+                  <Flex align="center" mb={5}>
+                    <IconRosetteDiscountCheckFilled size={30} color="var(--mantine-color-blue-9)" />
+
+                    <Text c="var(--mantine-color-blue-9)" fz="1.4rem" lh={1.4} fw={700} ml={5}>
+                      {i.title}
+                    </Text>
+                  </Flex>
+
+                  <Text c="var(--mantine-color-dark-4)" fz="1rem" lh={1.2} fw={600} ta="center" opacity={0.8} mb={20}>
+                    {i.subtitle}
+                  </Text>
+
+                  <Text c="var(--mantine-color-dark-4)" fz="1.05rem" lh={1.4} fw={600} ta="center">
+                    {i.description}
+                  </Text>
+                </Flex>
+              </Flex>
+            ))}
           </Fade>
         </Flex>
       </Flex>
