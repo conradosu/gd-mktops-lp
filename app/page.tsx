@@ -38,7 +38,7 @@ export default function Home() {
                   <strong>Marketing Ops na Prática</strong>: Todo o conhecimento que você precisa para organizar os
                   dados da sua empresa, sair do operacional e gerar mais resultados!
                 </Text>
-                <Text c="white" fz="1.2rem" fw={500} opacity={0.85}>
+                <Text c="white" fz="1.1rem" fw={500} opacity={0.85}>
                   O processo de estruturação de dados de Marketing Ops é um grande desafio para as empresas, desde
                   coletar os dados corretamente, garantir a confiabilidade das métricas e também identificar e otimizar
                   os resultados dos diferentes canais de aquisição.
@@ -331,6 +331,155 @@ export default function Home() {
             </Box>
           </Fade>
         </Box>
+      </Flex>
+
+      <Flex className={styles.section} align="center" direction="column">
+        <Flex maw={650} mb={50} align="center" ta="center">
+          <Fade delay={400} distance="20px" top>
+            <Box>
+              <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.2} fw={900} mb={10}>
+                O que você irá aprender nas aulas?
+              </Text>
+
+              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+                O curso Marketing Ops na Prática foi montado de forma organizada e explicativa para facilitar sua
+                jornada!
+              </Text>
+            </Box>
+          </Fade>
+        </Flex>
+
+        <Flex wrap="wrap" justify="center" maw={1200} mb={50}>
+          <Fade delay={200} distance="20px" top cascade>
+            {[
+              {
+                title: "Aula 1: Entendendo a estrutura de aquisição dos leads (10 min)",
+                description:
+                  "Explore as nuances da jornada do cliente e descubra como os leads entram em seu radar. Aprenda a mapear os pontos de contato cruciais para uma estratégia de aquisição eficaz.",
+                imgSrc: "/aulas/01.png",
+              },
+              {
+                title: "Aula 2: Definindo os parâmetros das origens (10 min)",
+                description:
+                  "Defina os critérios essenciais para identificar e categorizar as diferentes fontes de leads. Descubra como a precisão na definição dos parâmetros pode otimizar suas campanhas de aquisição.",
+                imgSrc: "/aulas/02.png",
+              },
+              {
+                title: "Aula 3: Capturando os parâmetros das origens no CRM (Hubspot) (13 min)",
+                description:
+                  "Aprenda a integrar e capturar dados precisos das origens diretamente em seu CRM utilizando o HubSpot. Descubra como essa integração pode enriquecer sua base de dados e melhorar suas estratégias de marketing.",
+                imgSrc: "/aulas/03.png",
+              },
+              {
+                title: "Aula 4: Capturando os parâmetros das origens no CRM (RD Station Marketing) (09 min)",
+                description:
+                  "Explore o processo de integração e captura de dados das origens em seu CRM usando o RD Station Marketing. Descubra como essa configuração pode fornecer insights valiosos para suas iniciativas de geração de leads.",
+                imgSrc: "/aulas/04.png",
+              },
+              {
+                title: "Aula 5: Montando e tratando sua base de dados (08 min)",
+                description:
+                  "Aprenda a montar e aprimorar sua base de dados para garantir consistência e qualidade. Descubra técnicas essenciais de tratamento de dados para insights mais precisos e confiáveis.",
+                imgSrc: "/aulas/05.png",
+              },
+              {
+                title: "Aula 6: Analisando seus dados em um dashboard (Looker) (18 min)",
+                description:
+                  "Analise um dashboard personalizado no Looker para saber quais informações e insights podem ser obtidos com a estruturação de dados corretamente realizada, explorando os painéis interativos para impulsionar sua tomada de decisão.",
+                imgSrc: "/aulas/06.png",
+              },
+              {
+                title: "Aula 7: Aproveitando o seu dashboard ao máximo (26 min)",
+                description:
+                  "Domine o uso avançado do seu dashboard, explorando recursos poderosos para análises aprofundadas. Descubra como personalizar e otimizar seu painel para extrair insights valiosos e impulsionar o desempenho de sua estratégia de marketing.",
+                imgSrc: "/aulas/07.png",
+              },
+            ].map((i, index) => (
+              <Flex maw={380} align="center" direction="column" mx={10} mb={50} key={index}>
+                <Image
+                  src={i.imgSrc}
+                  alt={i.title}
+                  w={380}
+                  radius="xl"
+                  mb={20}
+                  style={{
+                    filter: "drop-shadow(0px 0px 5px var(--mantine-color-blue-5))",
+                  }}
+                />
+
+                <Box ta="center">
+                  <Text c="var(--mantine-color-blue-9)" fz="1.1rem" lh={1.2} fw={700} mb={10}>
+                    {i.title}
+                  </Text>
+
+                  <Text c="var(--mantine-color-dark-4)" fz="0.9rem" lh={1.4} fw={600} ta="center">
+                    {i.description}
+                  </Text>
+                </Box>
+              </Flex>
+            ))}
+          </Fade>
+        </Flex>
+      </Flex>
+
+      <Flex
+        className={styles.section}
+        h={650}
+        mt={-75}
+        bg="var(--mantine-color-blue-9)"
+        align="center"
+        justify="center"
+        pos="relative"
+      >
+        <Box
+          w="100%"
+          h="100%"
+          pos="absolute"
+          opacity={0.4}
+          style={{
+            backgroundImage: "url(/autores2.jpg)",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        />
+
+        <Flex
+          maw={700}
+          align="center"
+          justify="center"
+          direction="column"
+          ta="center"
+          style={{
+            zIndex: 1,
+          }}
+        >
+          <Box mb={35}>
+            <Fade delay={400} distance="20px" top>
+              <Box>
+                <Text c="var(--mantine-color-white)" fz="2rem" lh={1.2} fw={900} mb={10}>
+                  O Marketing Ops vai colocar seus resultados no próximo nível!
+                </Text>
+
+                <Text c="var(--mantine-color-white)" fz="1.1rem" lh={1.4} fw={600} opacity={0.9}>
+                  Aprenda a coletar dados, tratar corretamente e garantir sua confiabilidade, além de otimizar os seus
+                  resultados de todos os seus canais de aquisição.
+                </Text>
+              </Box>
+            </Fade>
+          </Box>
+
+          <Fade delay={1200} distance="100px" left>
+            <iframe
+              src="https://www.youtube.com/embed/V0cebQ4LnTE?si=Z-FMnZ5U70IOe1Y8"
+              style={{
+                width: 700,
+                height: 400,
+                border: 0,
+              }}
+            />
+          </Fade>
+        </Flex>
       </Flex>
     </>
   );
