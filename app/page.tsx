@@ -7,6 +7,7 @@ const Fade = require("react-reveal/Fade");
 import { Box, Button, Divider, Flex, Image, Text } from "@mantine/core";
 import {
   IconClockFilled,
+  IconLock,
   IconRosetteDiscountCheckFilled,
   IconStarFilled,
   IconTrendingUp,
@@ -16,6 +17,20 @@ import Link from "next/link";
 import FadeIn from "react-fade-in";
 
 export default function Home() {
+  const PurchaseBtn = () => (
+    <Button
+      size="xl"
+      color="var(--mantine-color-blue-9)"
+      radius="md"
+      leftSection={<IconLock size={24} />}
+      style={{
+        filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
+      }}
+    >
+      COMPRAR O CURSO
+    </Button>
+  );
+
   return (
     <>
       <Flex
@@ -45,17 +60,7 @@ export default function Home() {
                   os resultados dos diferentes canais de aquisição.
                 </Text>
               </Box>
-              <Button
-                size="xl"
-                color="var(--mantine-color-blue-9)"
-                radius="md"
-                leftSection={<IconTrendingUp size={24} />}
-                style={{
-                  filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
-                }}
-              >
-                Quero mais informações!
-              </Button>
+              <PurchaseBtn />
             </Box>
           </FadeIn>
         </Box>
@@ -144,17 +149,7 @@ export default function Home() {
             </Text>
           </Flex>
 
-          <Button
-            size="xl"
-            color="var(--mantine-color-blue-9)"
-            radius="md"
-            leftSection={<IconTrendingUp size={24} />}
-            style={{
-              filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
-            }}
-          >
-            Quero mais informações!
-          </Button>
+          <PurchaseBtn />
         </Box>
       </Flex>
 
@@ -208,17 +203,7 @@ export default function Home() {
                     ))}
                   </Box>
 
-                  <Button
-                    size="xl"
-                    color="var(--mantine-color-blue-9)"
-                    radius="md"
-                    leftSection={<IconTrendingUp size={24} />}
-                    style={{
-                      filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
-                    }}
-                  >
-                    Quero mais informações!
-                  </Button>
+                  <PurchaseBtn />
                 </Fade>
               </Flex>
             </Box>
@@ -335,17 +320,7 @@ export default function Home() {
                 que estagnam.
               </Text>
 
-              <Button
-                size="xl"
-                color="var(--mantine-color-blue-9)"
-                radius="md"
-                leftSection={<IconTrendingUp size={24} />}
-                style={{
-                  filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
-                }}
-              >
-                Quero mais informações!
-              </Button>
+              <PurchaseBtn />
             </Box>
           </Fade>
         </Box>
@@ -476,7 +451,15 @@ export default function Home() {
             <Fade delay={400} distance="20px" top>
               <Box>
                 <Text c="var(--mantine-color-white)" fz="2rem" lh={1.2} fw={900} mb={10}>
-                  O Marketing Ops vai colocar seus resultados no próximo nível!
+                  O{" "}
+                  <span
+                    style={{
+                      color: "var(--mantine-color-blue-4)",
+                    }}
+                  >
+                    Marketing Ops na Prática
+                  </span>{" "}
+                  vai colocar seus resultados no próximo nível
                 </Text>
 
                 <Text c="var(--mantine-color-white)" fz="1.1rem" lh={1.4} fw={600} opacity={0.9}>
@@ -487,7 +470,7 @@ export default function Home() {
             </Fade>
           </Box>
 
-          <Fade delay={600} distance="100px" left>
+          <Fade delay={400} distance="100px" left cascade>
             <iframe
               src="https://www.youtube.com/embed/V0cebQ4LnTE?si=Z-FMnZ5U70IOe1Y8"
               style={{
@@ -499,17 +482,23 @@ export default function Home() {
               }}
             />
 
-            <Button
-              size="xl"
-              color="var(--mantine-color-blue-9)"
-              radius="md"
-              leftSection={<IconTrendingUp size={24} />}
-              style={{
-                filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
-              }}
-            >
-              Quero mais informações!
-            </Button>
+            <PurchaseBtn />
+          </Fade>
+        </Flex>
+      </Flex>
+
+      <Flex className={styles.section} align="center" direction="column">
+        <Flex maw={650} mb={50} align="center" ta="center">
+          <Fade delay={400} distance="20px" top>
+            <Box>
+              <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.2} fw={900} mb={10}>
+                Quem participou comprova:
+              </Text>
+
+              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+                Veja o que os participantes do curso Marketing Ops na Prática têm a dizer sobre a experiência.
+              </Text>
+            </Box>
           </Fade>
         </Flex>
       </Flex>
