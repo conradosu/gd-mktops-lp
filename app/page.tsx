@@ -50,6 +50,9 @@ export default function Home() {
                 color="var(--mantine-color-blue-9)"
                 radius="md"
                 leftSection={<IconTrendingUp size={24} />}
+                style={{
+                  filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
+                }}
               >
                 Quero mais informações!
               </Button>
@@ -141,7 +144,15 @@ export default function Home() {
             </Text>
           </Flex>
 
-          <Button size="xl" color="var(--mantine-color-blue-9)" radius="md" leftSection={<IconTrendingUp size={24} />}>
+          <Button
+            size="xl"
+            color="var(--mantine-color-blue-9)"
+            radius="md"
+            leftSection={<IconTrendingUp size={24} />}
+            style={{
+              filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
+            }}
+          >
             Quero mais informações!
           </Button>
         </Box>
@@ -202,6 +213,9 @@ export default function Home() {
                     color="var(--mantine-color-blue-9)"
                     radius="md"
                     leftSection={<IconTrendingUp size={24} />}
+                    style={{
+                      filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
+                    }}
                   >
                     Quero mais informações!
                   </Button>
@@ -326,6 +340,9 @@ export default function Home() {
                 color="var(--mantine-color-blue-9)"
                 radius="md"
                 leftSection={<IconTrendingUp size={24} />}
+                style={{
+                  filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
+                }}
               >
                 Quero mais informações!
               </Button>
@@ -425,7 +442,7 @@ export default function Home() {
 
       <Flex
         className={styles.section}
-        h={650}
+        h={850}
         mt={-75}
         bg="var(--mantine-color-gray-9)"
         align="center"
@@ -474,11 +491,25 @@ export default function Home() {
             <iframe
               src="https://www.youtube.com/embed/V0cebQ4LnTE?si=Z-FMnZ5U70IOe1Y8"
               style={{
-                width: 700,
-                height: 400,
+                width: 400,
+                height: 500,
                 border: 0,
+                borderRadius: 10,
+                marginBottom: 40,
               }}
             />
+
+            <Button
+              size="xl"
+              color="var(--mantine-color-blue-9)"
+              radius="md"
+              leftSection={<IconTrendingUp size={24} />}
+              style={{
+                filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
+              }}
+            >
+              Quero mais informações!
+            </Button>
           </Fade>
         </Flex>
       </Flex>
