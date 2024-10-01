@@ -6,11 +6,11 @@ const Fade = require("react-reveal/Fade");
 
 import { Box, Button, Divider, Flex, Image, Text } from "@mantine/core";
 import {
+  IconCertificate,
   IconClockFilled,
   IconLock,
   IconRosetteDiscountCheckFilled,
   IconStarFilled,
-  IconTrendingUp,
   IconUserCheck,
 } from "@tabler/icons-react";
 import Link from "next/link";
@@ -18,17 +18,19 @@ import FadeIn from "react-fade-in";
 
 export default function Home() {
   const PurchaseBtn = () => (
-    <Button
-      size="xl"
-      color="var(--mantine-color-blue-9)"
-      radius="md"
-      leftSection={<IconLock size={24} />}
-      style={{
-        filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
-      }}
-    >
-      COMPRAR O CURSO
-    </Button>
+    <Link href="https://hotmart.com/pt-br/marketplace/produtos/bi-para-marketing-e-vendas/S88102091Q">
+      <Button
+        size="xl"
+        color="var(--mantine-color-blue-9)"
+        radius="md"
+        leftSection={<IconLock size={24} />}
+        style={{
+          filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-9))",
+        }}
+      >
+        COMPRAR O CURSO
+      </Button>
+    </Link>
   );
 
   return (
@@ -487,27 +489,105 @@ export default function Home() {
         </Flex>
       </Flex>
 
-      <Flex className={styles.section} align="center" direction="column">
-        <Flex maw={650} mb={50} align="center" ta="center">
-          <Fade delay={400} distance="20px" top>
-            <Box>
-              <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.2} fw={900} mb={10}>
-                Quem participou comprova:
+      <Flex className={styles.section} align="center" direction="column" pb={60}>
+        <Flex maw={1200} justify="space-between" align="center" ta="left">
+          <Fade delay={200} distance="20px" top>
+            <Text
+              w={500}
+              fz="2.6rem"
+              lh={1.2}
+              fw={900}
+              mr={50}
+              style={{
+                backgroundColor: "rgb(74 0 254)",
+                backgroundImage: "linear-gradient(to right, rgb(74 0 254) 0%, rgb(151 34 197) 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Curso completo, com conteúdos bônus e uma oferta de lançamento imperdível. Aproveite!
+            </Text>
+          </Fade>
+
+          <Fade delay={200} distance="20px" top>
+            <Box maw={650}>
+              <Flex align="center" mb={10}>
+                <IconCertificate size={30} color="var(--mantine-color-blue-9)" style={{ marginRight: 10 }} />
+
+                <Text c="var(--mantine-color-dark-5)" fz="1.15rem" lh={1.2} fw={700}>
+                  Curso completo Marketing Ops na Prática:{" "}
+                  <span style={{ color: "var(--mantine-color-dark-1)", textDecoration: "line-through" }}>
+                    R$ 899,00
+                  </span>{" "}
+                  <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$ 497,00</span>
+                </Text>
+              </Flex>
+
+              <Flex align="center" mb={10}>
+                <IconCertificate size={30} color="var(--mantine-color-blue-9)" style={{ marginRight: 10 }} />
+
+                <Text c="var(--mantine-color-dark-5)" fz="1.15rem" lh={1.2} fw={700}>
+                  Aula bônus 1: Fundamentos de Business Intelligence
+                  <span style={{ color: "var(--mantine-color-dark-1)", textDecoration: "line-through" }}>
+                    R$ 97,00
+                  </span>{" "}
+                  <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$ 0,00</span>
+                </Text>
+              </Flex>
+
+              <Flex mb={35}>
+                <Text c="var(--mantine-color-blue-9)" fz="1.2rem" lh={1.2} fw={900}>
+                  Acesso vitalício ao curso e aula bônus!
+                </Text>
+              </Flex>
+
+              <Flex mb={5}>
+                <Text c="var(--mantine-color-dark-5)" fz="1.5rem" lh={1.2} fw={700}>
+                  Total:{" "}
+                  <span style={{ color: "var(--mantine-color-dark-1)", textDecoration: "line-through" }}>
+                    R$ 996,00
+                  </span>{" "}
+                </Text>
+              </Flex>
+
+              <Box mb={5}>
+                <Text c="var(--mantine-color-dark-5)" fz="1.6rem" lh={1.2} fw={600}>
+                  Por apenas:
+                </Text>
+
+                <Flex align="flex-end">
+                  <Text c="var(--mantine-color-green-6)" fz="3.6rem" lh={1.2} fw={900}>
+                    R$ 197,00*
+                  </Text>
+
+                  <Text c="var(--mantine-color-dark-5)" fz="1.2rem" lh={1.2} fw={700}>
+                    em até 12x no cartão!
+                  </Text>
+                </Flex>
+              </Box>
+
+              <Text c="var(--mantine-color-dark-5)" fz="1rem" lh={1.2} fw={600} mb={35}>
+                *Garantia de 7 dias de satisfação! Caso o conteúdo do curso não seja do seu agrado, basta solicitar o
+                reembolso dentro do período de 7 dias após o recebimento do acesso.
               </Text>
 
-              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
-                Veja o que os participantes do curso Marketing Ops na Prática têm a dizer sobre a experiência.
-              </Text>
+              <Box>
+                <PurchaseBtn />
+
+                <Text c="var(--mantine-color-dark-5)" fz="0.9rem" lh={1.2} fw={600} mt={15} opacity={0.8}>
+                  Compra 100% segura e garantida. Ambiente seguro e protegido.
+                </Text>
+              </Box>
             </Box>
           </Fade>
         </Flex>
       </Flex>
 
-      <Flex className={styles.section} align="center" direction="column">
+      <Flex className={styles.section} align="center" direction="column" bg="var(--mantine-color-gray-1)">
         <Flex maw={650} mb={50} align="center" ta="center">
           <Fade delay={400} distance="20px" top>
             <Box>
-              <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.2} fw={900} mb={10}>
+              <Text c="var(--mantine-color-dark-6)" fz="2rem" lh={1.2} fw={900} mb={10}>
                 Quem participou comprova:
               </Text>
 
