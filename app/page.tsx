@@ -12,6 +12,7 @@ import {
   IconTrendingUp,
   IconUserCheck,
 } from "@tabler/icons-react";
+import Link from "next/link";
 import FadeIn from "react-fade-in";
 
 export default function Home() {
@@ -299,7 +300,7 @@ export default function Home() {
         </Box>
       </Flex>
 
-      <Flex className={styles.section} bg="var(--mantine-color-gray-9)" align="center" direction="column">
+      <Flex className={styles.section} bg="var(--mantine-color-gray-8)" align="center" direction="column">
         <Box w={1000}>
           <Fade delay={200} distance="20px" top>
             <Box>
@@ -555,6 +556,51 @@ export default function Home() {
             ))}
           </Fade>
         </Flex>
+      </Flex>
+
+      <Flex className={styles.section} bg="var(--mantine-color-gray-9)" align="center" direction="column" pb={25}>
+        <Box w={1200}>
+          <Flex align="center">
+            <Image src="/logo.png" alt="Marketing Ops" w={200} mr={50} />
+
+            <Text c="var(--mantine-color-white)" fz="1.1rem" lh={1.4} fw={600} ta="left">
+              Profissionais e equipes de Marketing Ops frequentemente enfrentam desafios complexos, desde a extração e
+              tratamento de dados até a integração entre ferramentas. A análise de dados e a tomada de decisões são
+              cruciais, mas podem ser obstáculos.{" "}
+              <strong
+                style={{
+                  color: "var(--mantine-color-blue-6)",
+                }}
+              >
+                Com o curso Marketing Ops na prática, você vai aprender a superar esses desafios.
+              </strong>
+            </Text>
+          </Flex>
+
+          <Divider my={25} opacity={0.2} />
+
+          <Flex justify="space-between" align="center">
+            <Text c="var(--mantine-color-white)" fz="1rem" lh={1.2} fw={400} opacity={0.8}>
+              Copyright Marketing Ops© 2024. Todos os direitos reservados.
+            </Text>
+
+            <Text c="var(--mantine-color-white)" fz="1rem" lh={1.2} fw={400} opacity={0.8}>
+              Desenvolvido por{" "}
+              <Link href="https://www.conradodev.com.br/" target="_blank">
+                <strong
+                  style={{
+                    backgroundColor: "#CAFE00",
+                    backgroundImage: "linear-gradient(to right, #CAFE00 0%, #22C55E 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  Conrado Dev™
+                </strong>
+              </Link>
+            </Text>
+          </Flex>
+        </Box>
       </Flex>
     </>
   );
