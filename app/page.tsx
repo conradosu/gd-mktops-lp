@@ -516,9 +516,7 @@ export default function Home() {
 
                 <Text c="var(--mantine-color-dark-5)" fz="1.15rem" lh={1.2} fw={700}>
                   Curso completo Marketing Ops na Prática:{" "}
-                  <span style={{ color: "var(--mantine-color-dark-1)", textDecoration: "line-through" }}>
-                    R$ 899,00
-                  </span>{" "}
+                  <span style={{ color: "var(--mantine-color-red-5)", textDecoration: "line-through" }}>R$ 899,00</span>{" "}
                   <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$ 497,00</span>
                 </Text>
               </Flex>
@@ -527,10 +525,8 @@ export default function Home() {
                 <IconCertificate size={30} color="var(--mantine-color-blue-9)" style={{ marginRight: 10 }} />
 
                 <Text c="var(--mantine-color-dark-5)" fz="1.15rem" lh={1.2} fw={700}>
-                  Aula bônus 1: Fundamentos de Business Intelligence
-                  <span style={{ color: "var(--mantine-color-dark-1)", textDecoration: "line-through" }}>
-                    R$ 97,00
-                  </span>{" "}
+                  Aula bônus: Fundamentos de Business Intelligence:{" "}
+                  <span style={{ color: "var(--mantine-color-red-5)", textDecoration: "line-through" }}>R$ 97,00</span>{" "}
                   <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$ 0,00</span>
                 </Text>
               </Flex>
@@ -544,9 +540,7 @@ export default function Home() {
               <Flex mb={5}>
                 <Text c="var(--mantine-color-dark-5)" fz="1.5rem" lh={1.2} fw={700}>
                   Total:{" "}
-                  <span style={{ color: "var(--mantine-color-dark-1)", textDecoration: "line-through" }}>
-                    R$ 996,00
-                  </span>{" "}
+                  <span style={{ color: "var(--mantine-color-red-5)", textDecoration: "line-through" }}>R$ 996,00</span>{" "}
                 </Text>
               </Flex>
 
