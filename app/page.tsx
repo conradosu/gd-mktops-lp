@@ -250,7 +250,8 @@ export default function Home() {
               <Image
                 src="/guilherme.png"
                 alt="Instrutor 1"
-                w={400}
+                w="100%"
+                maw={400}
                 radius="xl"
                 style={{
                   filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-5))",
@@ -319,7 +320,8 @@ export default function Home() {
               <Image
                 src="/giu.png"
                 alt="Instrutor 1"
-                w={400}
+                w="100%"
+                maw={400}
                 radius="xl"
                 style={{
                   filter: "drop-shadow(0px 0px 20px var(--mantine-color-blue-5))",
@@ -419,11 +421,21 @@ export default function Home() {
                 imgSrc: "/aulas/07.png",
               },
             ].map((i, index) => (
-              <Flex maw={380} align="center" direction="column" mx={10} mb={50} key={index}>
+              <Flex
+                w="100%"
+                maw={380}
+                align="center"
+                direction="column"
+                mx={10}
+                mb={50}
+                key={index}
+                className={styles.aula}
+              >
                 <Image
                   src={i.imgSrc}
                   alt={i.title}
-                  w={380}
+                  w="100%"
+                  maw={380}
                   radius="xl"
                   mb={20}
                   style={{
@@ -445,7 +457,7 @@ export default function Home() {
           </Fade>
         </Flex>
 
-        <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.2} fw={900} ta="center">
+        <Text c="var(--mantine-color-blue-9)" fz="1.6rem" lh={1.2} fw={900} ta="center">
           Carga horária de 2 horas com acesso vitalício!
         </Text>
       </Flex>
@@ -508,7 +520,8 @@ export default function Home() {
             <iframe
               src="https://www.youtube.com/embed/V0cebQ4LnTE?si=Z-FMnZ5U70IOe1Y8"
               style={{
-                width: 400,
+                width: "100%",
+                maxWidth: 400,
                 height: 500,
                 border: 0,
                 borderRadius: 10,
