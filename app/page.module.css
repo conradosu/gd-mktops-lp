@@ -19,3 +19,69 @@
     width: 100%;
     max-width: 600px;
 }
+
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 20px;
+    }
+
+    .indicatedForContainer {
+        flex-direction: column;
+    }
+
+    .indicatedForItem {
+        flex-direction: row-reverse;
+    }
+
+    .indicatedForImg {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .indicatedForContent {
+        align-items: center!important;
+    }
+
+    .instBox {
+        margin-right:0!important;
+        margin-left:0!important;
+    }
+
+    .instName {
+        justify-content: center!important;
+        margin-top: 20px;
+    }
+
+    .instDesc {
+        text-align: center;
+    }
+
+    .gui {
+        flex-direction: column;
+        margin-bottom: 75px!important;
+    }
+
+    .giu {
+        flex-direction: column-reverse;
+    }
+
+    .sectionContent {
+        width: 100%!important;
+        text-align: center;
+    }
+
+    .buySection {
+        flex-direction: column;
+    }
+
+    .buyTitle {
+        width: 100%!important;
+        margin-right: 0!important;
+        margin-bottom: 20px;
+    }
+
+    .buyFinal {
+        text-align: center;
+        align-items: center;
+    }
+}

@@ -92,7 +92,7 @@ export default function Home() {
                 você aprenderá a:
               </Text>
 
-              <Text c="white" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+              <Text c="white" fz="1.1rem" lh={1.4} fw={700} opacity={0.8}>
                 Nosso curso Marketing Ops na Prática foi montado de forma organizada e explicativa para facilitar sua
                 jornada!
               </Text>
@@ -113,16 +113,22 @@ export default function Home() {
               "Criar um dashboard preciso e confiável no Looker Studio",
               "Extrair o máximo do seu dashboard",
             ].map((i, index) => (
-              <Flex align="center" mb={10} key={index}>
-                <IconStarFilled size={30} color="var(--mantine-color-blue-6)" style={{ marginRight: 12 }} />
-                <Text c="white" fz="1.2rem" lh={1.2} fw={500}>
+              <Flex align="center" mb={12} ta="left" key={index}>
+                <Box w={30} h={30} mr={12}>
+                  <IconStarFilled size={30} color="var(--mantine-color-blue-6)" />
+                </Box>
+
+                <Text c="white" fz="1.2rem" lh={1.4} fw={500}>
                   {i}
                 </Text>
               </Flex>
             ))}
-            <Flex align="center" mb={10}>
-              <IconStarFilled size={35} color="var(--mantine-color-yellow-5)" style={{ marginRight: 12 }} />
-              <Text c="white" fz="1.4rem" lh={1.2} fw={700}>
+            <Flex align="center" ta="left" mb={12}>
+              <Box w={35} h={35} mr={12}>
+                <IconStarFilled size={35} color="var(--mantine-color-yellow-5)" />
+              </Box>
+
+              <Text c="white" fz="1.4rem" lh={1.4} fw={700}>
                 <span
                   style={{
                     fontWeight: 900,
@@ -137,9 +143,9 @@ export default function Home() {
 
           <Divider my={20} opacity={0.2} />
 
-          <Flex align="center" mb={30}>
+          <Flex align="center" ta="left" mb={30}>
             <IconClockFilled size={25} color="var(--mantine-color-green-5)" style={{ marginRight: 12 }} />
-            <Text c="white" fz="1.2rem" lh={1.2} fw={500}>
+            <Text c="white" fz="1.2rem" lh={1.4} fw={500}>
               Carga horária total do curso:{" "}
               <strong
                 style={{
@@ -171,7 +177,7 @@ export default function Home() {
                 é indicado?
               </Text>
 
-              <Text c="white" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+              <Text c="white" fz="1.1rem" lh={1.4} fw={700} opacity={0.8}>
                 O curso Marketing Ops na Prática possui uma{" "}
                 <strong
                   style={{
@@ -186,7 +192,7 @@ export default function Home() {
           </Fade>
         </Flex>
 
-        <Flex align="center">
+        <Flex align="center" className={styles.indicatedForContainer}>
           <Fade delay={200} distance="20px" left>
             <Image className={styles.indicatedForImg} src="/indicatedFor.png" alt="Indicado para" />
           </Fade>
@@ -195,24 +201,26 @@ export default function Home() {
             <Box>
               <Flex direction="column" align="flex-end">
                 <Fade delay={400} distance="20px" top cascade>
-                  <Box mb={40}>
-                    {[
-                      "Empreendedores e Fundadores",
-                      "CMO’s, Heads e líderes de Marketing",
-                      "Profissionais de RevOps",
-                      "Analistas de Marketing, SEO e performance",
-                      "Gestores de tráfego",
-                    ].map((i, index) => (
-                      <Flex align="center" justify="flex-end" mb={10} key={index}>
-                        <Text c="white" fz="1.4rem" lh={1.2} fw={500} mr={12}>
-                          {i}
-                        </Text>
-                        <IconUserCheck size={30} color="var(--mantine-color-green-5)" />
-                      </Flex>
-                    ))}
-                  </Box>
+                  <Flex direction="column" align="flex-end" className={styles.indicatedForContent}>
+                    <Box mb={30}>
+                      {[
+                        "Empreendedores e Fundadores",
+                        "CMO’s, Heads e líderes de Marketing",
+                        "Profissionais de RevOps",
+                        "Analistas de Marketing, SEO e performance",
+                        "Gestores de tráfego",
+                      ].map((i, index) => (
+                        <Flex align="center" justify="flex-end" mb={10} key={index} className={styles.indicatedForItem}>
+                          <Text c="white" fz="1.4rem" lh={1.4} fw={500} mx={12}>
+                            {i}
+                          </Text>
+                          <IconUserCheck size={30} color="var(--mantine-color-green-5)" />
+                        </Flex>
+                      ))}
+                    </Box>
 
-                  <PurchaseBtn />
+                    <PurchaseBtn />
+                  </Flex>
                 </Fade>
               </Flex>
             </Box>
@@ -228,7 +236,7 @@ export default function Home() {
                 Quem são os instrutores do curso?
               </Text>
 
-              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={700} opacity={0.8}>
                 Nossos instrutores são especialistas em Marketing Ops e Business Intelligence e possuem anos de
                 experiência no mercado.
               </Text>
@@ -238,7 +246,7 @@ export default function Home() {
 
         <Box>
           <Fade delay={600} distance="20px" left>
-            <Flex align="center" mb={25}>
+            <Flex align="center" mb={25} className={styles.gui}>
               <Image
                 src="/guilherme.png"
                 alt="Instrutor 1"
@@ -249,20 +257,27 @@ export default function Home() {
                 }}
               />
 
-              <Box ta="left" ml={50} maw={600}>
-                <Flex align="center" mb={25}>
+              <Box ta="left" ml={50} maw={600} className={styles.instBox}>
+                <Flex align="center" mb={25} className={styles.instName}>
                   <IconRosetteDiscountCheckFilled
                     size={40}
                     color="var(--mantine-color-blue-9)"
                     style={{ marginRight: 10 }}
                   />
 
-                  <Text c="var(--mantine-color-blue-9)" fz="1.8rem" lh={1.2} fw={700}>
+                  <Text c="var(--mantine-color-blue-9)" fz="1.8rem" lh={1.4} fw={700}>
                     Guilherme Passoni
                   </Text>
                 </Flex>
 
-                <Text c="var(--mantine-color-dark-4)" fz="1.3rem" lh={1.4} fw={600} opacity={0.9}>
+                <Text
+                  c="var(--mantine-color-dark-4)"
+                  fz="1.3rem"
+                  lh={1.4}
+                  fw={600}
+                  opacity={0.9}
+                  className={styles.instDesc}
+                >
                   <strong>Formado em Administração pela UFPR</strong>, <strong>CRO na Levetta</strong> (software de
                   RevOps) e <strong>Diretor de Operações da Gestão em Dados</strong> (consultoria especializada em
                   Business Intelligence para Marketing e Vendas). Atua há <strong>10 anos com Marketing Ops</strong>,
@@ -275,17 +290,24 @@ export default function Home() {
           </Fade>
 
           <Fade delay={600} distance="20px" right>
-            <Flex align="center">
-              <Box ta="right" mr={50} maw={600}>
-                <Flex align="center" justify="flex-end" mb={25}>
-                  <Text c="var(--mantine-color-blue-9)" fz="1.8rem" lh={1.2} fw={700} mr={10}>
+            <Flex align="center" className={styles.giu}>
+              <Box ta="right" mr={50} maw={600} className={styles.instBox}>
+                <Flex align="center" justify="flex-end" mb={25} className={styles.instName}>
+                  <IconRosetteDiscountCheckFilled size={40} color="var(--mantine-color-blue-9)" />
+
+                  <Text c="var(--mantine-color-blue-9)" fz="1.8rem" lh={1.4} fw={700} ml={10}>
                     Giulliano Hamann
                   </Text>
-
-                  <IconRosetteDiscountCheckFilled size={40} color="var(--mantine-color-blue-9)" />
                 </Flex>
 
-                <Text c="var(--mantine-color-dark-4)" fz="1.3rem" lh={1.4} fw={600} opacity={0.9}>
+                <Text
+                  c="var(--mantine-color-dark-4)"
+                  fz="1.3rem"
+                  lh={1.4}
+                  fw={600}
+                  opacity={0.9}
+                  className={styles.instDesc}
+                >
                   <strong>Formado em Economia e com MBA em Gestão Financeira</strong>, <strong>CEO da Levetta</strong>{" "}
                   (software de RevOps) e <strong>Diretor Executivo da Gestão em Dados</strong> (consultoria{" "}
                   <strong>especializada em Business Intelligence</strong> para Marketing e Vendas). Atua há{" "}
@@ -309,7 +331,7 @@ export default function Home() {
       </Flex>
 
       <Flex className={styles.section} bg="var(--mantine-color-gray-8)" align="center" direction="column">
-        <Box w={1000}>
+        <Box w={1000} className={styles.sectionContent}>
           <Fade delay={200} distance="20px" top>
             <Box>
               <Text c="white" fz="2rem" lh={1.2} fw={900} mb={10}>
@@ -324,7 +346,7 @@ export default function Home() {
                 !
               </Text>
 
-              <Text c="white" fz="1.1rem" lh={1.4} fw={600} opacity={0.8} mb={25}>
+              <Text c="white" fz="1.1rem" lh={1.4} fw={700} opacity={0.8} mb={25}>
                 Tomar decisões baseadas em dados é o que diferencia as empresas que crescem exponencialmente daquelas
                 que estagnam.
               </Text>
@@ -343,7 +365,7 @@ export default function Home() {
                 O que você irá aprender nas aulas?
               </Text>
 
-              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={700} opacity={0.8}>
                 O curso Marketing Ops na Prática foi montado de forma organizada e explicativa para facilitar sua
                 jornada!
               </Text>
@@ -410,7 +432,7 @@ export default function Home() {
                 />
 
                 <Box ta="center">
-                  <Text c="var(--mantine-color-blue-9)" fz="1.1rem" lh={1.2} fw={700} mb={10}>
+                  <Text c="var(--mantine-color-blue-9)" fz="1.1rem" lh={1.4} fw={700} mb={10}>
                     {i.title}
                   </Text>
 
@@ -423,14 +445,14 @@ export default function Home() {
           </Fade>
         </Flex>
 
-        <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.4} fw={900} ta="center">
+        <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.2} fw={900} ta="center">
           Carga horária de 2 horas com acesso vitalício!
         </Text>
       </Flex>
 
       <Flex
         className={styles.section}
-        h={850}
+        py={40}
         bg="var(--mantine-color-gray-9)"
         align="center"
         justify="center"
@@ -499,8 +521,8 @@ export default function Home() {
         </Flex>
       </Flex>
 
-      <Flex className={styles.section} align="center" direction="column" pb={60}>
-        <Flex maw={1200} justify="space-between" align="center" ta="left">
+      <Flex className={styles.section} align="center" direction="column" pb={60} px={40}>
+        <Flex maw={1200} justify="space-between" align="center" ta="left" className={styles.buySection}>
           <Fade delay={200} distance="20px" top>
             <Text
               w={500}
@@ -508,6 +530,7 @@ export default function Home() {
               lh={1.2}
               fw={900}
               mr={50}
+              className={styles.buyTitle}
               style={{
                 backgroundColor: "rgb(74 0 254)",
                 backgroundImage: "linear-gradient(to right, rgb(74 0 254) 0%, rgb(151 34 197) 100%)",
@@ -526,8 +549,8 @@ export default function Home() {
 
                 <Text c="var(--mantine-color-dark-5)" fz="1.15rem" lh={1.2} fw={700}>
                   Curso completo Marketing Ops na Prática:{" "}
-                  <span style={{ color: "var(--mantine-color-red-5)", textDecoration: "line-through" }}>R$ 899,00</span>{" "}
-                  <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$ 497,00</span>
+                  <span style={{ color: "var(--mantine-color-red-6)", textDecoration: "line-through" }}>R$899,00</span>{" "}
+                  <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$497,00</span>
                 </Text>
               </Flex>
 
@@ -536,8 +559,8 @@ export default function Home() {
 
                 <Text c="var(--mantine-color-dark-5)" fz="1.15rem" lh={1.2} fw={700}>
                   Aula bônus: Fundamentos de Business Intelligence:{" "}
-                  <span style={{ color: "var(--mantine-color-red-5)", textDecoration: "line-through" }}>R$ 97,00</span>{" "}
-                  <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$ 0,00</span>
+                  <span style={{ color: "var(--mantine-color-red-6)", textDecoration: "line-through" }}>R$97,00</span>{" "}
+                  <span style={{ color: "var(--mantine-color-blue-9)", fontWeight: 900 }}>R$0,00</span>
                 </Text>
               </Flex>
 
@@ -550,7 +573,7 @@ export default function Home() {
               <Flex mb={5}>
                 <Text c="var(--mantine-color-dark-5)" fz="1.5rem" lh={1.2} fw={700}>
                   Total:{" "}
-                  <span style={{ color: "var(--mantine-color-red-5)", textDecoration: "line-through" }}>R$ 996,00</span>{" "}
+                  <span style={{ color: "var(--mantine-color-red-6)", textDecoration: "line-through" }}>R$996,00</span>{" "}
                 </Text>
               </Flex>
 
@@ -560,8 +583,8 @@ export default function Home() {
                 </Text>
 
                 <Flex align="flex-end">
-                  <Text c="var(--mantine-color-green-6)" fz="3.6rem" lh={1.2} fw={900}>
-                    R$ 197,00*
+                  <Text c="var(--mantine-color-green-6)" fz="3.6rem" lh={1.2} fw={900} mr={10}>
+                    R$197,00*
                   </Text>
 
                   <Text c="var(--mantine-color-dark-5)" fz="1.2rem" lh={1.2} fw={700}>
@@ -570,24 +593,24 @@ export default function Home() {
                 </Flex>
               </Box>
 
-              <Text c="var(--mantine-color-dark-5)" fz="1rem" lh={1.2} fw={600} mb={35}>
+              <Text c="var(--mantine-color-dark-5)" fz="1rem" lh={1.4} fw={600} mb={35}>
                 *Garantia de 7 dias de satisfação! Caso o conteúdo do curso não seja do seu agrado, basta solicitar o
                 reembolso dentro do período de 7 dias após o recebimento do acesso.
               </Text>
 
-              <Box>
+              <Flex direction="column" className={styles.buyFinal}>
                 <PurchaseBtn />
 
                 <Text c="var(--mantine-color-dark-5)" fz="0.9rem" lh={1.2} fw={600} mt={15} opacity={0.8}>
                   Compra 100% segura e garantida. Ambiente seguro e protegido.
                 </Text>
-              </Box>
+              </Flex>
             </Box>
           </Fade>
         </Flex>
       </Flex>
 
-      <Flex className={styles.section} align="center" direction="column" bg="var(--mantine-color-gray-1)">
+      <Flex className={styles.section} align="center" direction="column" bg="var(--mantine-color-gray-1)" pb={25}>
         <Flex maw={650} mb={50} align="center" ta="center">
           <Fade delay={400} distance="20px" top>
             <Box>
@@ -595,7 +618,7 @@ export default function Home() {
                 Quem participou comprova:
               </Text>
 
-              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
+              <Text c="var(--mantine-color-dark-5)" fz="1.1rem" lh={1.4} fw={700} opacity={0.8}>
                 Veja o que os participantes do curso Marketing Ops na Prática têm a dizer sobre a experiência.
               </Text>
             </Box>
@@ -627,7 +650,7 @@ export default function Home() {
                 imgSrc: "/depoimentos/03.png",
               },
             ].map((i, index) => (
-              <Flex maw={350} align="center" direction="column" mx={10} key={index}>
+              <Flex maw={350} align="center" direction="column" mx={10} mb={50} key={index}>
                 <Image
                   src={i.imgSrc}
                   alt={i.title}
@@ -648,7 +671,7 @@ export default function Home() {
                     </Text>
                   </Flex>
 
-                  <Text c="var(--mantine-color-dark-4)" fz="1rem" lh={1.2} fw={600} ta="center" opacity={0.8} mb={20}>
+                  <Text c="var(--mantine-color-dark-4)" fz="1rem" lh={1.4} fw={600} ta="center" opacity={0.8} mb={20}>
                     {i.subtitle}
                   </Text>
 
@@ -684,11 +707,11 @@ export default function Home() {
           <Divider my={25} opacity={0.2} />
 
           <Flex justify="space-between" align="center">
-            <Text c="var(--mantine-color-white)" fz="1rem" lh={1.2} fw={400} opacity={0.8}>
+            <Text c="var(--mantine-color-white)" fz="1rem" lh={1.4} fw={400} opacity={0.8}>
               Copyright Marketing Ops© 2024. Todos os direitos reservados.
             </Text>
 
-            <Text c="var(--mantine-color-white)" fz="1rem" lh={1.2} fw={400} opacity={0.8}>
+            <Text c="var(--mantine-color-white)" fz="1rem" lh={1.4} fw={400} opacity={0.8}>
               Desenvolvido por{" "}
               <Link href="https://www.conradodev.com.br/" target="_blank">
                 <strong
