@@ -84,4 +84,26 @@
         text-align: center;
         align-items: center;
     }
+
+    .footer {
+        width: 100%!important;
+        text-align: center !important;
+    }
+
+    .footerTop {
+        flex-direction: column;
+    }
+
+    .footerLogo {
+        margin-right: 0!important;
+        margin-bottom: 25px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+    }
+
+    .footerCopy {
+        margin-bottom: 15px;
+    }
 }

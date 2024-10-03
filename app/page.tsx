@@ -686,11 +686,11 @@ export default function Home() {
       </Flex>
 
       <Flex className={styles.section} bg="var(--mantine-color-gray-9)" align="center" direction="column" pb={25}>
-        <Box w={1200}>
-          <Flex align="center">
-            <Image src="/logo.png" alt="Marketing Ops" w={200} mr={50} />
+        <Box w={1200} className={styles.footer} ta="left">
+          <Flex align="center" className={styles.footerTop}>
+            <Image src="/logo.png" alt="Marketing Ops" w={200} mr={50} className={styles.footerLogo} />
 
-            <Text c="var(--mantine-color-white)" fz="1.1rem" lh={1.4} fw={600} ta="left">
+            <Text c="var(--mantine-color-white)" fz="1.1rem" lh={1.4} fw={600}>
               Profissionais e equipes de Marketing Ops frequentemente enfrentam desafios complexos, desde a extração e
               tratamento de dados até a integração entre ferramentas. A análise de dados e a tomada de decisões são
               cruciais, mas podem ser obstáculos.{" "}
@@ -706,8 +706,15 @@ export default function Home() {
 
           <Divider my={25} opacity={0.2} />
 
-          <Flex justify="space-between" align="center">
-            <Text c="var(--mantine-color-white)" fz="1rem" lh={1.4} fw={400} opacity={0.8}>
+          <Flex justify="space-between" align="center" className={styles.footerBottom}>
+            <Text
+              c="var(--mantine-color-white)"
+              fz="1rem"
+              lh={1.4}
+              fw={400}
+              opacity={0.8}
+              className={styles.footerCopy}
+            >
               Copyright Marketing Ops© 2024. Todos os direitos reservados.
             </Text>
 
