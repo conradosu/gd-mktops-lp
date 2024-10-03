@@ -172,8 +172,15 @@ export default function Home() {
               </Text>
 
               <Text c="white" fz="1.1rem" lh={1.4} fw={600} opacity={0.8}>
-                O curso Marketing Ops na Prática possui uma carga horária de apenas 2 horas, 100% online e te
-                introduzirá ao mundo do Marketing Ops!
+                O curso Marketing Ops na Prática possui uma{" "}
+                <strong
+                  style={{
+                    color: "var(--mantine-color-green-5)",
+                  }}
+                >
+                  carga horária de 2 horas
+                </strong>
+                , 100% online e te introduzirá ao mundo do Marketing Ops!
               </Text>
             </Box>
           </Fade>
@@ -344,7 +351,7 @@ export default function Home() {
           </Fade>
         </Flex>
 
-        <Flex wrap="wrap" justify="center" maw={1200} mb={50}>
+        <Flex wrap="wrap" justify="center" maw={1200}>
           <Fade delay={200} distance="20px" top cascade>
             {[
               {
@@ -415,12 +422,15 @@ export default function Home() {
             ))}
           </Fade>
         </Flex>
+
+        <Text c="var(--mantine-color-blue-9)" fz="2rem" lh={1.4} fw={900} ta="center">
+          Carga horária de 2 horas com acesso vitalício!
+        </Text>
       </Flex>
 
       <Flex
         className={styles.section}
         h={850}
-        mt={-75}
         bg="var(--mantine-color-gray-9)"
         align="center"
         justify="center"
