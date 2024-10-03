@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 const Fade = require("react-reveal/Fade");
 
 import { Box, Button, Divider, Flex, Image, Text } from "@mantine/core";
+import { isMobile } from "react-device-detect";
 import {
   IconCertificate,
   IconClockFilled,
@@ -35,31 +36,19 @@ export default function Home() {
 
   return (
     <>
-      <Flex
-        className={styles.section}
-        h="100vh"
-        align="center"
-        style={{
-          backgroundImage: "url(/autores.jpg)",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundColor: "var(--mantine-color-gray-9)",
-        }}
-      >
+      <Flex className={`${styles.section} ${styles.hero}`} h="100vh" align="center">
         <Box className={styles.authors}>
           <FadeIn transitionDuration={1000}>
             <Box w="100%" maw={600}>
-              <Box mb={30}>
-                <Image src="/logo.png" alt="Marketing Ops" w={250} mb={40} />
-                <Text c="white" fz="2rem" lh={1.2} fw={500} mb={25}>
+              <Box mb={40}>
+                <Image src="/logo.png" alt="Marketing Ops" w={200} mb={30} />
+                <Text c="white" fz="1.8rem" lh={1.2} fw={500} mb={15}>
                   <strong>Marketing Ops na Prática</strong>: Todo o conhecimento que você precisa para organizar os
-                  dados da sua empresa, sair do operacional e gerar mais resultados!
+                  dados da sua empresa!
                 </Text>
-                <Text c="white" fz="1.1rem" fw={500} opacity={0.85}>
-                  O processo de estruturação de dados de Marketing Ops é um grande desafio para as empresas, desde
-                  coletar os dados corretamente, garantir a confiabilidade das métricas e também identificar e otimizar
-                  os resultados dos diferentes canais de aquisição.
+                <Text c="white" fz="1rem" fw={500} opacity={0.85}>
+                  A estruturação de dados de Marketing Ops é desafiadora para as empresas, envolvendo a coleta correta
+                  de dados, a garantia de métricas confiáveis e a otimização dos resultados nos canais de aquisição.
                 </Text>
               </Box>
               <PurchaseBtn />
@@ -684,7 +673,7 @@ export default function Home() {
                     </Text>
                   </Flex>
 
-                  <Text c="var(--mantine-color-dark-4)" fz="1rem" lh={1.4} fw={600} ta="center" opacity={0.8} mb={20}>
+                  <Text c="var(--mantine-color-dark-4)" fz="1rem" lh={1.4} fw={600} ta="center" opacity={0.8} mb={15}>
                     {i.subtitle}
                   </Text>
 

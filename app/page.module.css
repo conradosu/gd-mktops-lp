@@ -6,6 +6,13 @@
     justify-content: center;
 }
 
+.hero {
+    background-image: url("/autores.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .authors {
     width: 1200px;
 }
@@ -23,6 +30,15 @@
 @media (max-width: 768px) {
     .section {
         padding: 50px 20px;
+    }
+
+    .hero {
+        background-image: url("/autores_mobile.jpg");
+        background-position: 54% center;
+    }
+
+    .authors {
+        width: 100%;
     }
 
     .indicatedForContainer {
