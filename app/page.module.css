@@ -7,6 +7,7 @@
 }
 
 .hero {
+    height: 100vh;
     background-image: url("/autores.jpg");
     background-size: cover;
     background-position: center;
@@ -33,6 +34,7 @@
     }
 
     .hero {
+        height: 100svh;
         background-image: url("/autores_mobile.jpg");
         background-position: 54% center;
     }

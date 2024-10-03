@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <Flex className={`${styles.section} ${styles.hero}`} h="100vh" align="center">
+      <Flex className={`${styles.section} ${styles.hero}`} align="center">
         <Box className={styles.authors}>
           <FadeIn transitionDuration={1000}>
             <Box w="100%" maw={600}>
