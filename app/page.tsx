@@ -5,7 +5,6 @@ import styles from "./page.module.css";
 const Fade = require("react-reveal/Fade");
 
 import { Box, Button, Divider, Flex, Image, Text } from "@mantine/core";
-import { isMobile } from "react-device-detect";
 import {
   IconCertificate,
   IconClockFilled,
