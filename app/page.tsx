@@ -4,6 +4,7 @@
 import styles from "./page.module.css";
 const Fade = require("react-reveal/Fade");
 
+import { useEffect } from "react";
 import { Box, Button, Divider, Flex, Image, Text } from "@mantine/core";
 import {
   IconCertificate,
@@ -13,10 +14,18 @@ import {
   IconStarFilled,
   IconUserCheck,
 } from "@tabler/icons-react";
+
 import Link from "next/link";
 import FadeIn from "react-fade-in";
+import TagManager from "react-gtm-module";
 
 export default function Home() {
+  useEffect(() => {
+    TagManager.initialize({
+      gtmId: "GTM-55KGTXJN",
+    });
+  }, []);
+
   const PurchaseBtn = () => (
     <Link href="https://hotmart.com/pt-br/marketplace/produtos/bi-para-marketing-e-vendas/S88102091Q">
       <Button
